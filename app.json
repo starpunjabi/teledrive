@@ -24,23 +24,23 @@
       "description": "Base URL for the API, default: '' (empty string).",
       "required": false
     },
-    "REACT_APP_TG_API_HASH": {
+    "REACT_APP_TG_API_HASH":c036139b9fdbc2d2044d8bdf21cb335e {
       "description": "Application hash from Telegram App (for experimental features).",
       "required": true
     },
-    "REACT_APP_TG_API_ID": {
+    "REACT_APP_TG_API_ID":3820024 {
       "description": "Application ID from your Telegram App (for experimental features).",
       "required": true
     },
-    "TG_API_HASH": {
+    "TG_API_HASH":c036139b9fdbc2d2044d8bdf21cb335e {
       "description": "Application hash from Telegram App.",
       "required": true
     },
-    "TG_API_ID": {
+    "TG_API_ID":3820024 {
       "description": "Application ID from your Telegram App.",
       "required": true
     },
-    "ADMIN_USERNAME": {
+    "ADMIN_USERNAME":@gs66561 {
       "description": "Username Telegram for admin account.",
       "required": true
     },
