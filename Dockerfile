@@ -2,8 +2,9 @@
 FROM node:16.14.0 as build
 
 # Add ARGs for the required environment variables
-ARG REACT_APP_TG_API_ID
-ARG REACT_APP_TG_API_HASH
+# Fix typo in the ARG name
+ARG ARG1=3820024
+ARG ARG2=c036139b9fdbc2d2044d8bdf21cb335e
 
 WORKDIR /apps
 
@@ -16,16 +17,20 @@ COPY api/package.json api/
 COPY web/package.json web/
 
 # Copy the .env file
-COPY docker/.env .
+COPY dockerenv/. .
 
 # Clean yarn cache
 RUN yarn cache clean
 
 # Install dependencies
-RUN yarn install --network-timeout 1000000
+# Remove "--network-timeout 1000000" argument from yarn install command
+RUN yarn install
 
 # Copy the entire project directory
 COPY . .
 
 # Run build command for all the workspaces
 RUN yarn workspaces run build
+
+# Add new line to expose port 3000
+EXPOSE 3000
